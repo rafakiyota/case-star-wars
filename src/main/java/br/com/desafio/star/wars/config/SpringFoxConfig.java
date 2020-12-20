@@ -24,7 +24,7 @@ public class SpringFoxConfig {
 	private ApiInfo metaData() {
 		return new ApiInfoBuilder()
 				.title("Case Star Wars")
-				.description("\"API de filmes, personagens, espécies, planetas e naves do Star Wars\"")
+				.description("\"API de filmes, personagens, espécies, planetas, naves e veículos do Star Wars\"")
 				.version("1.0.0")
 				.license("Apache License Version 2.0")
 				.licenseUrl("https://www.apache.org/licenses/LICENSE-2.0\"")
