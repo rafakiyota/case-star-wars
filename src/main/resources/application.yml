@@ -15,4 +15,15 @@ spring:
 server:
   port: 7075
   servlet.contextPath: /case-star-wars
-  
+
+## dados da api star wars  
+aplicacao:
+  cliente:
+    star-wars-api:
+      url: https://swapi.dev
+      recurso-people: /api/people
+      recurso-films: /api/films
+      recurso-planets: /api/planets
+      recurso-starships: /api/starships
+      recurso-species: /api/species
+      recurso-vehicles: /api/vehicles
