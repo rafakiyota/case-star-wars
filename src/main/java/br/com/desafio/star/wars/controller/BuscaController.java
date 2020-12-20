@@ -15,15 +15,25 @@ import br.com.desafio.star.wars.model.personagem.BuscaPersonagemDTO;
 import br.com.desafio.star.wars.model.planeta.BuscaPlanetaDTO;
 import br.com.desafio.star.wars.model.veiculo.BuscaVeiculoDTO;
 import br.com.desafio.star.wars.service.BuscarServices;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 
 @RestController
 @RequestMapping("/v1/busca")
+@Api(tags = "API Busca", description = "API de consulta do mundo Star Wars")
 public class BuscaController {
 
 	@Autowired
 	private BuscarServices service;
 	
 	@GetMapping("/personagem")
+	@ApiOperation(value = "Consulta personagens")
+	@ApiResponses(value = {
+	    @ApiResponse(code = 200, message = "retorna personagens"),
+	    @ApiResponse(code = 500, message = "Ocorreu um erro inesperado no servidor"),
+	})
 	public ResponseEntity<BuscaPersonagemDTO> findPersonagem(
 			@RequestParam(required=false, defaultValue="") String termo, 
 			@RequestParam(required=false, defaultValue="1") Long pagina) {
@@ -33,6 +43,11 @@ public class BuscaController {
 	}
 	
 	@GetMapping("/filme")
+	@ApiOperation(value = "Consulta filmes")
+	@ApiResponses(value = {
+	    @ApiResponse(code = 200, message = "retorna filmes"),
+	    @ApiResponse(code = 500, message = "Ocorreu um erro inesperado no servidor"),
+	})
 	public ResponseEntity<BuscaFilmeDTO> findFilme(
 			@RequestParam(required=false, defaultValue="") String termo, 
 			@RequestParam(required=false, defaultValue="1") Long pagina) {
@@ -42,6 +57,11 @@ public class BuscaController {
 	}
 	
 	@GetMapping("/planeta")
+	@ApiOperation(value = "Consulta planetas")
+	@ApiResponses(value = {
+	    @ApiResponse(code = 200, message = "retorna planetas"),
+	    @ApiResponse(code = 500, message = "Ocorreu um erro inesperado no servidor"),
+	})
 	public ResponseEntity<BuscaPlanetaDTO> getPlanetas(
 			@RequestParam(required=false, defaultValue="") String termo, 
 			@RequestParam(required=false, defaultValue="1") Long pagina) {
@@ -51,6 +71,11 @@ public class BuscaController {
 	}
 	
 	@GetMapping("/nave")
+	@ApiOperation(value = "Consulta naves")
+	@ApiResponses(value = {
+	    @ApiResponse(code = 200, message = "retorna naves"),
+	    @ApiResponse(code = 500, message = "Ocorreu um erro inesperado no servidor"),
+	})
 	public ResponseEntity<BuscaNaveDTO> getNaves(
 			@RequestParam(required=false, defaultValue="") String termo, 
 			@RequestParam(required=false, defaultValue="1") Long pagina) {
@@ -60,6 +85,11 @@ public class BuscaController {
 	}
 	
 	@GetMapping("/especie")
+	@ApiOperation(value = "Consulta espécies")
+	@ApiResponses(value = {
+	    @ApiResponse(code = 200, message = "retorna espécies"),
+	    @ApiResponse(code = 500, message = "Ocorreu um erro inesperado no servidor"),
+	})
 	public ResponseEntity<BuscaEspecieDTO> getEspecies(
 			@RequestParam(required=false, defaultValue="") String termo, 
 			@RequestParam(required=false, defaultValue="1") Long pagina) {
@@ -69,6 +99,11 @@ public class BuscaController {
 	}
 	
 	@GetMapping("/veiculo")
+	@ApiOperation(value = "Consulta veículos")
+	@ApiResponses(value = {
+	    @ApiResponse(code = 200, message = "retorna veículos"),
+	    @ApiResponse(code = 500, message = "Ocorreu um erro inesperado no servidor"),
+	})
 	public ResponseEntity<BuscaVeiculoDTO> getVeiculos(
 			@RequestParam(required=false, defaultValue="") String termo, 
 			@RequestParam(required=false, defaultValue="1") Long pagina) {
