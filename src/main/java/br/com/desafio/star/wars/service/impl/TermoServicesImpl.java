@@ -19,8 +19,7 @@ public class TermoServicesImpl implements TermoServices {
 	private BuscaRepo buscaRepo;
 
 	@Override
-	public TermoPaginaDTO all(Integer pagina) {
-		
+	public TermoPaginaDTO all(Integer pagina) {		
 		Pageable pageable = PageRequest.of(pagina, 10, Sort.by("quantidade").descending());
 		Page<Busca> buscaPaginada = buscaRepo.findAll(pageable);
 		return new TermoPaginaDTO(buscaPaginada);
