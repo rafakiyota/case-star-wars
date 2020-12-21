@@ -1,7 +1,7 @@
 INSERT INTO 
 	busca (dominio, termo, quantidade) 
 VALUES 
-	('people', 'vader', 100000),
+	('people', 'vader', 200000),
 	('people', 'yoda', 99999),
 	('people', 'darth', 8000),
 	('people', 'darth vader', 7900),
