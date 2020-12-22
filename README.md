@@ -6,9 +6,9 @@
 
 ## O que foi feito nesse projeto
 
-* API Star Wars: API para busca de personagens, filmes, planetas, espécies, naves e veículos.
-* API Termos: API de termos consultados e suas quantidade de buscas para todos os domínios(personagens, filmes, planetas, espécies, naves e veículos).
-* API Sugestões: API de sugestões para o termo consultado.
+* API Star Wars: Busca personagens, filmes, planetas, espécies, naves e veículos.
+* API Termos: Consulta termos e quantidade de buscas para todos os domínios(personagens, filmes, planetas, espécies, naves e veículos).
+* API Sugestões: Sugere termos para todos os domínios(personagens, filmes, planetas, espécies, naves e veículos).
 
 ## Ao executar os passos abaixo conseguiremos rodar a aplicação:
 
