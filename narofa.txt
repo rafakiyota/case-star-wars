@@ -1,0 +1,9 @@
+
+public Map<String, FarofaDTO> farofaMapping(List<FarofaDTO> farofas) {
+
+    Map<String, FarofaDTO> farofaMaps = farofas.stream().collect(Collectors.toMap(
+    farofa -> String.format("%s%s", farofa.getId(), farofa.getLocalDate()), 
+    farofa -> farofa));
+    
+    return farofaMaps;
+}
